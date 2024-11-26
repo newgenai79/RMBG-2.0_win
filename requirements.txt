@@ -1,0 +1,17 @@
+--extra-index-url https://download.pytorch.org/whl/cu121
+
+torch
+accelerate
+opencv-python
+pillow
+numpy==1.26.4
+timm
+kornia
+prettytable
+typing
+scikit-image
+huggingface_hub==0.26.2
+transformers>=4.39.1
+gradio
+gradio_imageslider
+loadimg>=0.1.1
