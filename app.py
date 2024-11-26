@@ -60,17 +60,14 @@ image2 = gr.Image(label="Upload an image",type="filepath")
 text = gr.Textbox(label="Paste an image URL")
 png_file = gr.File(label="output png file")
 
-
-chameleon = load_img("giraffe.jpg", output_type="pil")
-
 url = "http://farm9.staticflickr.com/8488/8228323072_76eeddfea3_z.jpg"
 
 tab1 = gr.Interface(
-    fn, inputs=image, outputs=[slider1, gr.File(label="output png file")], examples=[chameleon], api_name="image"
+    fn, inputs=image, outputs=[slider1, gr.File(label="output png file")], api_name="image"
 )
 
 tab2 = gr.Interface(fn, inputs=text, outputs=[slider2, gr.File(label="output png file")], examples=[url], api_name="text")
-tab3 = gr.Interface(process_file, inputs=image2, outputs=png_file, examples=["giraffe.jpg"], api_name="png")
+tab3 = gr.Interface(process_file, inputs=image2, outputs=png_file, api_name="png")
 
 
 demo = gr.TabbedInterface(
