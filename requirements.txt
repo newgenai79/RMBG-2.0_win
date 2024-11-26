@@ -12,6 +12,6 @@ typing
 scikit-image
 huggingface_hub==0.26.2
 transformers>=4.39.1
-gradio
+gradio==4.44
 gradio_imageslider
 loadimg>=0.1.1
